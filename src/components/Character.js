@@ -42,10 +42,6 @@ const Character = props => {
 
   useEffect(() => {
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    fetchData();
   }, [props.selectedChar]);
 
   let content = <p>Loading Character...</p>;
@@ -67,4 +63,4 @@ const Character = props => {
   return content;
 }
 
-export default Character;
+export default React.memo(Character);
